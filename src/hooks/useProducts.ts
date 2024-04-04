@@ -3,11 +3,17 @@ import { apiUrl } from "../constants";
 import { Product } from "../models/models";
 import axios from "axios";
 
-const useProducts = () =>
+const useProducts = (category: string) =>
   useQuery<Product[]>({
-    queryKey: ["products"],
+    queryKey: ["products", category],
     queryFn: () =>
-      axios.get<Product[]>(`${apiUrl}/products`).then((res) => res.data),
+      axios
+        .get<Product[]>(
+          `${apiUrl}/products${
+            category !== "all" ? `/category/${category}` : ""
+          }`
+        )
+        .then((res) => res.data),
   });
 
 export default useProducts;
