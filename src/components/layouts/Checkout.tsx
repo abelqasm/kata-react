@@ -44,7 +44,7 @@ const Checkout = () => {
           <div className="flex flex-col">
             <label htmlFor="firstName">First Name: </label>
             <input
-              className="p-1 bg-gray-300 rounded-md"
+              className="p-1 bg-gray-300 rounded-md border border-gray-700"
               type="text"
               {...register("firstName")}
             />
@@ -52,7 +52,7 @@ const Checkout = () => {
           <div className="flex flex-col">
             <label htmlFor="lastName">Last Name:</label>
             <input
-              className="p-1 bg-gray-300 rounded-md"
+              className="p-1 bg-gray-300 rounded-md border border-gray-700"
               type="text"
               {...register("lastName")}
             />
@@ -60,7 +60,7 @@ const Checkout = () => {
           <div className="flex flex-col">
             <label htmlFor="street">Street address:</label>
             <input
-              className="p-1 bg-gray-300 rounded-md"
+              className="p-1 bg-gray-300 rounded-md border border-gray-700"
               type="text"
               {...register("street")}
             />
@@ -68,7 +68,7 @@ const Checkout = () => {
           <div className="flex flex-col">
             <label htmlFor="city">Town/city:</label>
             <input
-              className="p-1 bg-gray-300 rounded-md"
+              className="p-1 bg-gray-300 rounded-md border border-gray-700"
               type="text"
               {...register("city")}
             />
@@ -76,7 +76,7 @@ const Checkout = () => {
           <div className="flex flex-col">
             <label htmlFor="phoneNumber">Phone number:</label>
             <input
-              className="p-1 bg-gray-300 rounded-md"
+              className="p-1 bg-gray-300 rounded-md border border-gray-700"
               type="number"
               {...register("phoneNumber")}
             />
@@ -84,7 +84,7 @@ const Checkout = () => {
           <div className="flex flex-col">
             <label htmlFor="email">Email address</label>
             <input
-              className="p-1 bg-gray-300 rounded-md"
+              className="p-1 bg-gray-300 rounded-md border border-gray-700"
               type="email"
               {...register("email")}
             />
