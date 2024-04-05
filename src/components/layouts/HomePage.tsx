@@ -13,7 +13,8 @@ const HomePage = () => {
           <span className="label-text">Chose a category</span>
         </div>
         <select
-          className="select select-bordered"
+          className="select select-bordered w-full"
+          value="all"
           onChange={(event: any) => setCategory(() => event.target.value)}
         >
           <option value="all" selected>
@@ -22,7 +23,9 @@ const HomePage = () => {
           {!isLoading &&
             categories &&
             categories.map((category) => (
-              <option value={category}>{category}</option>
+              <option value={category} key={category}>
+                {category}
+              </option>
             ))}
         </select>
       </label>
