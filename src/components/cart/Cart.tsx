@@ -10,8 +10,10 @@ const Cart = () => {
   return (
     <>
       <button className="relative p-2 h-fit" onClick={() => setShowModal(true)}>
-        <FaCartShopping />
-        <span className="absolute top-0 right-0 leading-none text-xs font-bold text-red-100 bg-red-600 p-1 rounded-full"></span>
+        <FaCartShopping className="w-6"/>
+        <span className="absolute top-0 right-0 leading-none text-xs font-bold text-red-100 bg-red-600 p-1 rounded-full">
+          {cartItems.reduce((acc, item) => acc + item.quantity, 0)}
+        </span>
       </button>
       {showModal ? (
         <>
