@@ -26,9 +26,12 @@ const useCartItemsStore = create<CartStore>((set) => ({
     }),
   removeFromCart: (productId: number) =>
     set((store) => {
-      return {
-        cart: store.cart.filter((item) => item.product.id !== productId),
-      };
+      const items: CartItem[] = store.cart.filter(
+        (item) => item.product.id !== productId
+      );
+
+      localStorage.setItem("cart", JSON.stringify(items));
+      return { cart: items };
     }),
   quantityHandler: (productId: number, quantity: number) =>
     set((store) => {
